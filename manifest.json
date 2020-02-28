@@ -1,0 +1,17 @@
+{
+  "name": "Chrome Jira Old Issue View",
+  "version": "1.0",
+  "description": "Quickly edit Jira issues in the old issue view",
+  "manifest_version": 2,
+  "page_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
+  ]
+}
