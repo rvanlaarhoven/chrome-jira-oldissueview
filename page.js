@@ -1,4 +1,4 @@
 const editButton = document.getElementById('edit-issue');
-if (!editButton) {
+if (editButton) {
   editButton.click();
 }

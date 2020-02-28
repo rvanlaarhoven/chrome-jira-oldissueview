@@ -32,7 +32,7 @@ const changeIssueView = (tab) => {
       // Jira usually needs a while to load the issue view.
       setTimeout(() => {
         chrome.tabs.executeScript(null, {file: 'page.js'});
-      }, 2000);
+      }, 1000);
     });
   }
 };
