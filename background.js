@@ -28,9 +28,11 @@ const changeIssueView = (tab) => {
     chrome.tabs.update(tab.id, {
       url: `${tab.url}?oldIssueView=true`
     }, () => {
+      // Triggering the page script requires a delay, since
+      // Jira usually needs a while to load the issue view.
       setTimeout(() => {
         chrome.tabs.executeScript(null, {file: 'page.js'});
-      }, 1000);
+      }, 2000);
     });
   }
 };
